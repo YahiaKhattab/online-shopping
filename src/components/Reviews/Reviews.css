@@ -1,0 +1,76 @@
+.h2Style {
+    font-family: "Integral CF Regular", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.h5Style {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0%;
+}
+
+.pStyle {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: #00000099;
+}
+
+.cardStyle {
+    width: 100%;
+    max-width: 400px;
+    height: 240px;
+    border-radius: 20px;
+    padding: 28px 32px;
+    border: 1px solid #0000001A;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.cardStyle:hover {
+    transform: translateY(-3px);
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: black !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (min-width: 1200px) {
+    .swiper-button-prev-custom {
+        transform: translateX(5px);
+    }
+    .swiper-button-next-custom {
+        transform: translateX(-10px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .swiper-button-prev-custom,
+    .swiper-button-next-custom {
+        transform: none;
+    }
+}
+ @media (max-width:768px){
+    .h2Style{
+font-style: Bold;
+font-size: 32px;
+line-height: 36px;
+    }
+ }

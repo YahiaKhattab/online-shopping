@@ -1,0 +1,119 @@
+.productsTitle{
+font-family: "Integral CF Regular", sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+}
+.productsName{
+font-family: 'Satoshi',sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+.productsRating{
+font-family: 'Satoshi',sans-serif;
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: black;
+}
+.productsPrice{
+font-family: 'Satoshi',sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+.productsOriginalPrice{
+font-family: 'Satoshi',sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+text-decoration: line-through;
+color: #00000066;
+}
+.discount{
+background: #FF33331A;
+border-radius: 62px;
+font-family: 'Satoshi',sans-serif;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FF3333;
+padding: 6px 14px;
+}
+.viewAll{
+font-family: 'Satoshi',sans-serif;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+.btnViewAll{
+    border: 1px solid #0000001A;
+    background-color: white;
+    width: 16%;
+}
+.productHover:hover{
+    transform: translateY(-10px);
+}
+@media (max-width:1400px){
+    .productHover{
+        max-height: 260px !important;
+    }
+}
+@media (max-width:1200px){
+    .productHover{
+        max-height: 215px !important;
+    }
+    .productsTitle{
+font-size: 32px;
+    }
+    .productsName{
+font-size: 16px;
+    }
+    .productsRating{
+font-size: 12px;
+    }
+    .productsPrice{
+font-size: 20px;
+    }
+    .productsOriginalPrice{
+font-size: 20px;
+    }
+    .discount{
+font-size: 10px;
+    }
+    .viewAll{
+font-size: 14px;
+    }
+}
+@media (max-width:992px){
+    .productHover{
+        max-height: 154px !important;
+    }
+}
+@media (max-width:768px){
+        .btnViewAll{
+        width:100%;
+    }
+    .productHover{
+        max-height: 215px !important;
+    }
+}

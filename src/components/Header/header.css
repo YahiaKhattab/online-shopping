@@ -1,0 +1,33 @@
+.header {
+    font-family: 'Satoshi', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.header2 {
+    color: white;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+@media (max-width:768px){
+    .header {
+font-size: 12px;
+}
+
+.header2 {
+font-style: Medium;
+font-size: 12px;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: 0%;
+}
+}

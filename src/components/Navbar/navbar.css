@@ -1,0 +1,55 @@
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #6c757d;
+}
+.shop {
+font-family: "Integral CF Regular", sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}
+.navbar-nav {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+.navIconsHover:hover{
+     transform: translateY(-5px);
+}
+@media (max-width: 767.98px) {
+    .search-container {
+        margin-top: 1rem;
+        width: 100%;
+        order: 5 !important;
+    }
+    .navbar-toggler {
+        order: 1 !important;
+    }
+    .navbar-brand {
+        order: 2 !important;
+        margin-left: 1rem;
+    }
+    .navbar-collapse {
+        order: 4 !important;
+    }
+    .d-flex.align-items-center.ms-3 {
+        order: 3 !important;
+        margin-left: auto !important;
+    }
+    .blackBox{
+        margin-top: -250px !important;
+    }
+    .shop{
+font-size: 25.2px;
+    }
+}

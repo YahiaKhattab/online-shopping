@@ -1,0 +1,130 @@
+.desc {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: #00000099;
+}
+
+.title {
+    font-family: "Integral CF Regular", sans-serif;
+    font-weight: 700;
+    font-size: 33.45px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.title2 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.desc2 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0px;
+    color: #00000099;
+    cursor: pointer;
+}
+
+.copyright {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    color: #00000099;
+}
+
+.newsP {
+    font-family: "Integral CF Regular", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+.envelope-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-55%);
+    z-index: 10;
+    color: #6c757d;
+}
+
+.newsBtn {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0%;
+}
+
+.btnSubscribe {
+    border: 1px solid #0000001A;
+    background-color: white;
+}
+
+.email {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #00000066;
+}
+
+.socialHover:hover{
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 28.85px;
+    }
+    .newsP {
+        font-size: 32px;
+        line-height: 35px;
+    }
+    .email {
+        font-size: 14px;
+        width: 100% !important;
+    }
+    .newsBtn {
+        font-size: 14px;
+    }
+    .desc {
+        line-height: 20px;
+    }
+    .title2 {
+        font-size: 14px;
+        
+    }
+    .desc2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .copyrightImage{
+      flex-direction: column;
+      align-items: start;
+    }
+    .btnSubscribe{
+        width: 100% !important;
+    }
+    .inputSubscribe{
+        width: 100% !important;
+    }
+    .envelope-icon{
+        transform: translateY(-60%);
+    }
+}

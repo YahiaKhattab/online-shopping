@@ -1,0 +1,94 @@
+.shopP {
+    font-family: "Integral CF Regular", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    
+}
+
+.shopP2 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #00000099;
+}
+
+.bText {
+font-family: 'Satoshi', sans-serif;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+.divNum {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+}
+
+.divPP {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #00000099;
+}
+
+.middle {
+    border-left: 1px solid #0000001A;
+    border-right: 1px solid #0000001A;
+}
+
+@media (max-width: 768px) {
+    .shopP {
+        font-size: 36px;
+        line-height: 34px;
+    }
+    .shopP2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .bText {
+        width: 100%;
+    }
+    .divNum {
+        font-size: 24px;
+    }
+    .divPP {
+        font-size: 12px;
+    }
+   
+    .middle {
+        border-left: 1px solid #0000001A  !important;
+        border-right: none !important;
+        border-top: none !important;
+        border-bottom: none !important;
+    }
+    .lastStat {
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0 !important;
+    }
+    .firstStat {
+        border-right: none !important;
+    }
+    .btn {
+        width: 98%;
+        height: 12%;
+    }
+    .small{
+        top: 30% !important;
+        left: 7% !important;
+    }
+    .big{
+        top: 7% !important;
+        left: 73% !important;
+    }
+    .paddingSmall{
+        padding: 0 !important;
+    }
+}
