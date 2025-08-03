@@ -9,7 +9,8 @@ import './navbar.css';
 const Navbar = () => {
     const [showSearch, setShowSearch] = useState(false);
     return (
-        <nav className="navbar navbar-expand-md navbar-light my-2 mb-md-3 p-md-2">
+        <div className="container-fluid">
+        <nav className="navbar navbar-expand-md navbar-light my-2 mb-md-3 ">
             <div className="container-fluid d-flex align-items-center">
                 <button
                     className="navbar-toggler order-md-1"
@@ -23,9 +24,9 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <span className="navbar-brand shop fs-2 fw-bold order-md-2 mx-md-0 mx-auto" >SHOP.CO</span>
+                <span className="navbar-brand shop order-md-2 ms-md-5" >SHOP.CO</span>
 
-                <div className="collapse navbar-collapse flex-grow-0 mt-3 mt-md-2 order-md-3" id="main-nav">
+                <div className="collapse navbar-collapse  mt-3 mt-md-2 order-md-3 ms-md-4" id="main-nav">
                     <ul className="navbar-nav">
                         <li>
                             <NavDropdown
@@ -41,13 +42,13 @@ const Navbar = () => {
                             </NavDropdown>
                         </li>
                         <li className="nav-item">
-                            <Link href="#" className="nav-link">On Sale</Link>
+                            <a href="#topSelling" className="nav-link">On Sale</a>
                         </li>
                         <li className="nav-item">
-                            <Link href="#" className="nav-link">New Arrivals</Link>
+                            <a href="#newArrivals" className="nav-link">New Arrivals</a>
                         </li>
                         <li className="nav-item">
-                            <Link href="#" className="nav-link">Brands</Link>
+                            <a href="#brands" className="nav-link">Brands</a>
                         </li>
                         <li className="nav-item">
                             <Link to="/dashboard" className="nav-link">Dashboard</Link>
@@ -55,7 +56,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="d-none d-md-flex align-items-center flex-grow-1 ms-md-3 mt-md-2 position-relative search-container order-md-4">
+                <div className="d-none d-md-flex align-items-center mt-md-2 position-relative search-container order-md-4" style={{width:"45%"}}>
                     <span className="search-icon">
                         <Search />
                     </span>
@@ -67,7 +68,7 @@ const Navbar = () => {
                     />
                 </div>
 
-                <div className="d-flex align-items-center ms-3 order-md-5">
+                <div className="d-flex align-items-center ms-3 order-md-5 me-md-5">
                     <button 
                     className="d-md-none btn btn-link text-dark ms-auto me-2"
                     onClick={() => setShowSearch(!showSearch)}
@@ -98,6 +99,8 @@ const Navbar = () => {
                 </div>
             )}
         </nav>
+        </div>
+        
     );
 };
 

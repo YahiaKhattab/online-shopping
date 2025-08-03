@@ -70,9 +70,9 @@ function App() {
             <Shop />
             <Brands />
             <div className="container mx-auto p-4">
-              <ProductSection title="NEW ARRIVALS" products={newArrivals} />
+              <ProductSection id="newArrivals" title="NEW ARRIVALS" products={newArrivals} />
               <hr />
-              <ProductSection title="TOP SELLING" products={topSelling} />
+              <ProductSection id="topSelling" title="TOP SELLING" products={topSelling} />
             </div>
             <Browse />
             <Reviews />

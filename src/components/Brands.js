@@ -6,7 +6,7 @@ import calvin from '../images/calvin.png';
 
 const Brands = () => {
     return (
-        <div className="container-fluid bg-black">
+        <div id="brands" className="container-fluid bg-black">
             <div className="row d-flex justify-content-between justify-content-md-around align-items-center p-4">
                 <div className="col-4 col-md-2 ">
                     <img src={versace} alt="versace" className="img-fluid" />

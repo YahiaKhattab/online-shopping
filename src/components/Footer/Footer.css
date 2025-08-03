@@ -127,4 +127,7 @@
     .envelope-icon{
         transform: translateY(-60%);
     }
+    .blackBox{
+        max-width: 93%;
+    }
 }

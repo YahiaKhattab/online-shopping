@@ -2,13 +2,13 @@ import './ProductSection.css';
 import { StarFill, StarHalf, Star } from 'react-bootstrap-icons';
 import { useMediaQuery } from 'react-responsive';
 
-const ProductSection = ({ title, products }) => {
+const ProductSection = ({ id,title, products }) => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
 
     const displayedProducts = isMobile ? products.slice(0, 2) : products.slice(0, 4);
 
     return (
-        <section className="py-5">
+        <section id={id} className="py-5">
             <h2 className="mb-5 productsTitle">{title}</h2>
             <div className="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-0">
                 {displayedProducts.map((product) => (
@@ -17,7 +17,7 @@ const ProductSection = ({ title, products }) => {
                             <img
                                 src={product.image}
                                 alt={product.name}
-                                className="w-100 h-50 object-fit-cover mb-2 productHover"
+                                className="w-100 object-fit-cover mb-2 productHover"
                                 style={{ maxHeight: '305px',borderRadius:"20px" }}
                             />
                             <h3 className="productsName">{product.name}</h3>

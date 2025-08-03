@@ -13,7 +13,7 @@ import { AiFillTwitterCircle} from "react-icons/ai";
 const Footer = () => {
     return (
         <div className="w-100" style={{ background: "#F0F0F0", position: "relative", paddingTop: "100px" }}>
-            <div className="container bg-black rounded-4 p-5 position-relative blackBox" style={{ marginTop: "-200px" ,maxWidth:"90%"}}>
+            <div className="container bg-black rounded-4 p-5 position-relative blackBox" style={{ marginTop: "-200px" }}>
                 <div className="row align-items-center justify-content-between">
                     <div className=" col-md-6">
                         <p className="newsP">STAY UP TO DATE ABOUT OUR LATEST OFFERS</p>
@@ -40,9 +40,9 @@ const Footer = () => {
             </div>
             <div className="container py-5">
                 <div className="row d-flex justify-content-between">
-                    <div className=" col-12 col-md-3 justify-content-between  d-flex flex-column">
+                    <div className=" col-12 col-md-3 justify-content-between  d-flex flex-column ">
                         <p className="title">SHOP.CO</p>
-                        <p className="desc">We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+                        <p className="desc pe-md-5">We have clothes that suits your style and which you're proud to wear. From women to men.</p>
                         <div className="d-flex gap-2 mb-3">
                             {/* <img src={twitter} alt="twitter" style={{ cursor: "pointer" }} /> */}
                         <AiFillTwitterCircle size={30}  style={{ cursor: "pointer" }} className='socialHover'/>
@@ -54,16 +54,16 @@ const Footer = () => {
                             <FaGithub size={28} style={{ cursor: "pointer" }} className='socialHover'/>
                         </div>
                     </div>
-                    <div className=" col-6 col-md-2">
+                    <div className="ps-md-5  col-6 col-md-2">
                         <FooterEl title="Company" first="About" second="Features" third="Work" fourth="Career" />
                     </div>
-                    <div className="col-6 col-md-2">
+                    <div className="ps-md-5 col-6 col-md-2">
                         <FooterEl title="Help" first="Customer Support" second="Delivery Details" third="Terms & Conditions" fourth="Privacy Policy" />
                     </div>
-                    <div className="col-6 col-md-2">
+                    <div className="ps-md-5 col-6 col-md-2">
                         <FooterEl title="FAQ" first="Account" second="Manage Deliveries" third="Orders" fourth="Payments" />
                     </div>
-                    <div className="col-6 col-md-2">
+                    <div className="ps-md-5 col-6 col-md-2">
                         <FooterEl title="Resources" first="Free eBooks" second="Development Tutorial" third="How to - Blog" fourth="Youtube Playlist" />
                     </div>
                 </div>

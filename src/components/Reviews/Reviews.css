@@ -36,7 +36,7 @@
 }
 
 .cardStyle:hover {
-    transform: translateY(-3px);
+    transform: translateY(3px);
 }
 
 .swiper-button-prev-custom,

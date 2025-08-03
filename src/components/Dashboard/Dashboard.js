@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -28,10 +29,9 @@ const Dashboard = () => {
   }, []);
 
   const fetchProducts = () => {
-    fetch('https://68821f1f66a7eb81224d80cf.mockapi.io/product')
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
+    axios.get('https://68821f1f66a7eb81224d80cf.mockapi.io/product')
+      .then((response) => {
+        setProducts(response.data);
       })
       .catch((error) => {
         console.error('Error fetching products:', error);
@@ -74,20 +74,18 @@ const Dashboard = () => {
   };
 
   const calculateDiscountedPrice = (originalPrice, discount) => {
-  const price = Number(originalPrice) || 0;  
-  const discountValue = Number(discount) || 0;  
-  return discountValue > 0 
-    ? price - (price * (discountValue / 100)) 
-    : price;
-};
+    const price = Number(originalPrice) || 0;  
+    const discountValue = Number(discount) || 0;  
+    return discountValue > 0 
+      ? price - (price * (discountValue / 100)) 
+      : price;
+  };
 
   const handleDelete = (productId) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
-      fetch(`https://68821f1f66a7eb81224d80cf.mockapi.io/product/${productId}`, {
-        method: 'DELETE',
-      })
-        .then(response => {
-          if (response.ok) {
+      axios.delete(`https://68821f1f66a7eb81224d80cf.mockapi.io/product/${productId}`)
+        .then((response) => {
+          if (response.status === 200) {
             setProducts(products.filter(product => product.id !== productId));
             toast.success('Product deleted successfully!');
             fetchProducts();
@@ -95,7 +93,7 @@ const Dashboard = () => {
             toast.error('Failed to delete product');
           }
         })
-        .catch(error => {
+        .catch((error) => {
           console.error('Error deleting product:', error);
           toast.error('Error deleting product');
         });
@@ -166,7 +164,6 @@ const Dashboard = () => {
   };
 
   const handleSubmit = () => {
-    
     if (!isAdding && currentProduct) {
       const isUnchanged = Object.keys(editedProduct).every(
         key => editedProduct[key] === currentProduct[key]
@@ -180,42 +177,28 @@ const Dashboard = () => {
     }
 
     if (isAdding) {
-      fetch('https://68821f1f66a7eb81224d80cf.mockapi.io/product', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(editedProduct),
-      })
-        .then(response => response.json())
-        .then(newProduct => {
-          setProducts([...products, newProduct]);
+      axios.post('https://68821f1f66a7eb81224d80cf.mockapi.io/product', editedProduct)
+        .then((response) => {
+          setProducts([...products, response.data]);
           setShowModal(false);
           toast.success('Product added successfully!');
           fetchProducts();
         })
-        .catch(error => {
+        .catch((error) => {
           console.error('Error adding product:', error);
           toast.error('Error adding product');
         });
     } else {
-      fetch(`https://68821f1f66a7eb81224d80cf.mockapi.io/product/${currentProduct.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(editedProduct),
-      })
-        .then(response => response.json())
-        .then(updatedProduct => {
+      axios.put(`https://68821f1f66a7eb81224d80cf.mockapi.io/product/${currentProduct.id}`, editedProduct)
+        .then((response) => {
           setProducts(products.map(product =>
-            product.id === currentProduct.id ? updatedProduct : product
+            product.id === currentProduct.id ? response.data : product
           ));
           setShowModal(false);
           toast.success('Product updated successfully!');
           fetchProducts();
         })
-        .catch(error => {
+        .catch((error) => {
           console.error('Error updating product:', error);
           toast.error('Error updating product');
         });
@@ -283,7 +266,7 @@ const Dashboard = () => {
                 <td>
                   <span className="ms-2">{product.rating}/5</span>
                 </td>
-                <td>${product.original_price}</td>
+                <td >${product.original_price}</td>
                 <td>
                   {product.discount > 0 ? (
                     <span className="badge bg-danger">-{product.discount}%</span>
@@ -438,4 +421,5 @@ const Dashboard = () => {
     </div>
   );
 };
+
 export default Dashboard;
