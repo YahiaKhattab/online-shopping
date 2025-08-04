@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Spinner, Container } from 'react-bootstrap';
+import axios from 'axios';
 import Brands from './components/Brands';
 import Browse from './components/Browse/Browse';
 import Footer from './components/Footer/Footer';
@@ -10,7 +11,7 @@ import Reviews from './components/Reviews/Reviews';
 import Shop from './components/ShopMain/Shop';
 import ProductSection from './components/ProductSection/ProductSection';
 import Dashboard from './components/Dashboard/Dashboard';
-import NotFound from "./components/NotFound";
+import NotFound from './components/NotFound';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -18,15 +19,12 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://68821f1f66a7eb81224d80cf.mockapi.io/product')
+    axios.get('https://68821f1f66a7eb81224d80cf.mockapi.io/product')
       .then((response) => {
-        if (!response.ok) {
+        if (response.status !== 200) {
           throw new Error('Failed to fetch products');
         }
-        return response.json();
-      })
-      .then((data) => {
-        setProducts(data);
+        setProducts(response.data);
         setIsLoading(false);
       })
       .catch((error) => {
